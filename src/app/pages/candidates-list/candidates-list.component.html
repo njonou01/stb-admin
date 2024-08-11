@@ -1,0 +1,10 @@
+<div class="candidates-container">
+  <h2>Candidatures</h2>
+  <div class="candidates-list">
+    <div class="candidate" *ngFor="let candidate of candidates">
+      <img [src]="candidate.imageUrl" [alt]="candidate.name">
+      <span>{{ candidate.name }}</span>
+      <i class="fas fa-ellipsis-v"></i>
+    </div>
+  </div>
+</div>

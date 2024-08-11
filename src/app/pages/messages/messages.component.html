@@ -1,0 +1,31 @@
+<div class="container-fluid mt-3 ">
+  <div class="row">
+    <div class="col-12">
+      <app-document-nav></app-document-nav>
+      <div class="file-manager-card">
+        <div class="file-manager-header">
+          <div class="file-manager-path">
+            <i class="fas fa-square header-icon"></i>
+            <i class="fas fa-bars header-icon"></i>
+            <span>C:.../bibliothèque/livre/nom du fichier</span>
+          </div>
+          <div class="file-manager-actions">
+            <i class="fas fa-info-circle header-icon"></i>
+            <i class="fas fa-copy header-icon"></i>
+            <i class="fas fa-video header-icon"></i>
+            <i class="fas fa-th-large header-icon"></i>
+            <i class="fas fa-paper-plane header-icon"></i>
+            <i class="fas fa-cut header-icon"></i>
+            <i class="fas fa-trash header-icon"></i>
+          </div>
+        </div>
+        <div class="file-manager-body">
+          <app-document-table></app-document-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>Messages de groupe</div>
+<app-document-table></app-document-table>
+<app-message-conversation class="conversation-container"></app-message-conversation>

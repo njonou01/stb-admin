@@ -1,0 +1,54 @@
+<div class="sidebar sidebar-left"
+  [ngClass]="{'collapsed': sidebarService.leftSidebarCollapsed$ | async, 'show': sidebarService.mobileLeftSidebarVisible$ | async}">
+
+  <div class="sidebar-header">
+    <button title="Fermer le panneau de gauche" class="btn-toggle float-end d-lg-none"
+      (click)="sidebarService.toggleMobileLeftSidebar()">
+      <i class="fas"
+        [ngClass]="{'fa-bars': !(sidebarService.mobileLeftSidebarVisible$ | async), 'fa-times': (sidebarService.mobileLeftSidebarVisible$ | async)}"></i>
+    </button>
+  </div>
+
+  <div class="team-info">
+    <span class="team-name">LyonEtudiants'Team</span>
+    <button title="Edit profile" class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
+  </div>
+
+  <ul class="nav flex-column fw-bold">
+    <li class="nav-item" *ngFor="let item of navItems">
+      <a class="nav-link" [routerLink]="item.route" routerLinkActive="active">
+        <i [class]="item.icon"></i>
+        <span class="nav-text">{{ item.label }}</span>
+
+        <span class="badge bg-primary" *ngIf="item.badge && (sidebarService.mobileLeftSidebarVisible$ | async)">{{
+          item.badge }}</span>
+
+      </a>
+      <div *ngIf="item.subItems">
+        <app-item-menu-sidebar [title]="item.label" [items]="item.subItems"></app-item-menu-sidebar>
+      </div>
+    </li>
+  </ul>
+
+  <div class="user-info">
+    <img src="assets/images/user-avatar.png" alt="User Avatar" class="user-avatar">
+    <div class="user-details" *ngIf="!(sidebarService.mobileLeftSidebarVisible$ | async)">
+      <span class="user-name">Adrien</span>
+      <span class="user-role">fonction</span>
+    </div>
+    <div class="dropdown" *ngIf="!(sidebarService.mobileLeftSidebarVisible$ | async)">
+      <button title="Toggle leftsidebar" class="btn dropdown-toggle" type="button" id="userDropdown"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-ellipsis-v"></i>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="userDropdown">
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+:host{
+  .virements {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+
+      th, td {
+        padding: 12px;
+        text-align: left;
+        background-color: #e2e2eb;
+        border-bottom: 1px solid #ffffff;
+      }
+
+      tr {
+        color: var(--text-color);
+        font-weight: 500;
+        td:first-child{
+         font-weight: bold;
+        }
+      }
+
+
+    }
+
+    .amount {
+      font-weight: bold;
+    }
+
+    .recipient {
+      font-family: monospace;
+    }
+  }
+}

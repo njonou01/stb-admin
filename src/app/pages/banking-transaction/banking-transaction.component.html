@@ -1,0 +1,36 @@
+<div class="bank-interface">
+  <main class="container">
+    <div class="balance">
+      <div class="balance-info">
+        <div class="user-info">
+          <h2>
+            <span class="first-name">Ibrahima</span>
+            <span class="last-name">DRAME</span>
+          </h2>
+          <button title="Menu">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </div>
+        <div class="account-info">
+          <span class="account-number">N° 0000000000001</span>
+          <span class="account-balance">FR 38 000 000 000 000</span>
+          <span class="account-name">Université de Lyon</span>
+        </div>
+        <p class="amount">1123,85 €</p>
+      </div>
+      <div class="actions">
+        <span title="Add money">
+          <i class="fa fa-line-chart"></i>
+         </span>
+        <span title="Withdraw money">
+          <i class="fa fa-exchange" aria-hidden="true"></i>
+        </span>
+        <span class="transfer-money" >
+            <img src="assets/images/banking/Vector (1).png" alt="Transfer money">
+        </span>
+      </div>
+    </div>
+
+    <router-outlet></router-outlet>
+  </main>
+</div>

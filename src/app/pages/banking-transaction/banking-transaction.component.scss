@@ -1,0 +1,79 @@
+:host {
+  .bank-interface {
+    padding: 20px;
+  }
+
+
+
+  .balance {
+    background-image: url('../../../assets/images/banking/Carte\ BG.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    .balance-info {
+      .user-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .first-name {
+          font-size: 24px;
+          margin-right: 10px;
+        }
+
+        .last-name {
+          font-weight: bold;
+          font-size: 24px;
+        }
+
+        button {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+        }
+      }
+
+      .account-info {
+        display: flex;
+        flex-direction: column;
+        line-height: 0.85rem;
+      }
+
+      .account-info span {
+        font-size: 12px;
+      }
+
+      .amount {
+        font-size: 3rem;
+      }
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+
+      .transfer-money {
+
+        margin-top: -20px;
+
+      }
+    }
+  }
+
+
+}

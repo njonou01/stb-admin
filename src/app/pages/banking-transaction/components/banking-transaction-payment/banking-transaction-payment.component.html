@@ -1,0 +1,12 @@
+<div class="virements">
+  <table>
+    <tbody>
+      <tr *ngFor="let virement of virements; let i = index">
+        <td>Virement {{ i + 1 }}</td>
+        <td>{{ virement.amount | currency:'EUR':'symbol':'1.2-2' }}</td>
+        <td>{{ virement.recipient }}</td>
+        <td>{{ virement.date | date:'dd/MM/yyyy' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

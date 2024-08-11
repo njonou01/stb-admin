@@ -1,0 +1,173 @@
+<ng-container>
+  <section class="section student-effectif-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-8">
+          <img class="chart-img" [src]="commonAssetService.chartImg" alt="chart">
+        </div>
+        <div class="col-lg-4">
+          <div class="info-container">
+            <div class="student-effectif-list">
+              <div class="student-effectif-item">
+                <app-progress-circle class="progress-circle" [progress]="70" [size]="60" [strokeWidth]="6"
+                  [backgroundColor]="'black'" [progressColor]="'blue'" [textColor]="'white'" [textSize]="12">
+                </app-progress-circle>
+                <div class="student-effectif-details">
+                  <span>Etudiants français</span>
+                  <div class="student-effectif-details-item">
+                    <span>Effectif: </span>
+                    <span class="student-effectif-details-item-value">2700</span>
+                  </div>
+                </div>
+              </div>
+              <div class="student-effectif-item">
+                <app-progress-circle class="progress-circle" [progress]="80" [size]="60" [strokeWidth]="6"
+                  [backgroundColor]="'black'" [progressColor]="'blue'" [textColor]="'white'" [textSize]="14">
+                </app-progress-circle>
+                <div class="student-effectif-details">
+                  <span>Etudiants français</span>
+                  <div class="student-effectif-details-item">
+                    <span>Effectif: </span>
+                    <span class="student-effectif-details-item-value">2700</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="stat-section">
+              <div class="stat-item">Nombre total de comptes : 5400</div>
+              <div class="stat-item">Comptes ouverts : 23</div>
+              <div class="stat-changes ">
+                <div class="stat-change stat-item">
+                  <i class="fa fa-arrow-up"></i>
+                  <span>10%</span>
+                </div>
+                <div class="stat-change stat-item">
+                  <i class="fa fa-arrow-down"></i>
+                  <span>10%</span>
+                </div>
+              </div>
+            </div>
+            <div class="progress-section">
+              <div class="row">
+                <div class="col-6 progress-item">
+                  <app-progress-circle class="progress-circle" [progress]="70" [size]="60" [strokeWidth]="6"
+                    [backgroundColor]="'black'" [progressColor]="'blue'" [textColor]="'white'" [textSize]="12">
+                  </app-progress-circle>
+                  <span>Actifs</span>
+                </div>
+                <div class="col-6 progress-item">
+                  <app-progress-circle class="progress-circle" [progress]="70" [size]="60" [strokeWidth]="6"
+                    [backgroundColor]="'black'" [progressColor]="'blue'" [textColor]="'white'" [textSize]="12">
+                  </app-progress-circle>
+                  <span>inactifs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section account-stat-section">
+    <h2>Statistiques des comptes</h2>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-7">
+          <h4 class="table-title">
+            <i class="fa fa-arrow-up"></i>
+            Classement des universités durant les derniers mois
+          </h4>
+          <table class="table university-ranking-table">
+            <thead>
+              <tr>
+                <th>N°</th>
+                <th>Universités</th>
+                <th>Croissance</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let ranking of commonAssetService.universityRankings">
+                <td>{{ ranking.rank }}</td>
+                <td>{{ ranking.university }}</td>
+                <td>{{ ranking.growth }}</td>
+                <td>{{ ranking.total }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-lg-5">
+          <div class="university-stats">
+            <div class="university-name">
+              <i class="fa fa-arrow-up"></i>
+              <span>Université de Paris</span>
+              <div class="university-icons">
+                <i class="fa fa-arrow-down"></i>
+                <i class="fa fa-arrow-up"></i>
+              </div>
+            </div>
+            <div class="open-accounts">
+              <div class="open-accounts-icon">
+                <i class="fa fa-arrow-up"></i>
+              </div>
+              <div class="open-accounts-details">
+                <span>Comptes ouverts</span>
+                <span>1000</span>
+              </div>
+            </div>
+            <div class="gender-stats">
+              <div class="gender-stat">
+                <div class="gender-stat-icon">
+                  <i class="fa fa-arrow-up"></i>
+                  <span>Garçons</span>
+                </div>
+                <div class="gender-stat-details">
+                  <span>10%</span>
+                </div>
+              </div>
+              <div class="gender-stat">
+                <div class="gender-stat-icon">
+                  <i class="fa fa-arrow-up"></i>
+                  <span>Garçons</span>
+                </div>
+                <div class="gender-stat-details">
+                  <span>10%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section student-account-section">
+    <h2>Comptes étudiants</h2>
+    <div class="search-bar">
+      <i class="fas fa-sliders"></i>
+      <span>Étudiants</span>
+      <input type="text" placeholder="Recherche">
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Noms </th>
+          <th>Prénom</th>
+          <th>Établissement</th>
+          <th>RIB</th>
+          <th>Nationalité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of commonAssetService.student_banking_data">
+          <td>{{ student.nom }}</td>
+          <td>{{ student.prenom }}</td>
+          <td>{{ student.etablissement }}</td>
+          <td>{{ student.rib }}</td>
+          <td>{{ student.nationalite }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>

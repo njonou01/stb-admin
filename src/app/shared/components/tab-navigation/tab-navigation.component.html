@@ -1,0 +1,7 @@
+<nav class="tab-navigation">
+  <button *ngFor="let tab of tabs"
+          (click)="setActiveTab(tab)"
+          [class.active]="tab === activeTab">
+    {{ tab | titlecase }}
+  </button>
+</nav>

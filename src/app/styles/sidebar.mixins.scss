@@ -1,0 +1,39 @@
+@mixin sidebar-base {
+  height: calc(100vh - var(--navbar-height) - var(--banner-height));
+  width: var(--sidebar-width);
+  position: fixed;
+  top: calc(var(--navbar-height) + var(--banner-height));
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  transition: all 0.3s;
+  overflow-y: auto;
+  z-index: 1000;
+
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+
+  &.collapsed {
+    overflow-x: hidden;
+  }
+}
+
+@mixin sidebar-header {
+  display: flex;
+  justify-content: end;
+  padding-right: 10px;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@mixin sidebar-content {
+  padding: 20px;
+}

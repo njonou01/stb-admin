@@ -1,0 +1,29 @@
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 3px solid var(--light-gray);
+  }
+
+  th {
+    background-color: #fff;
+    font-weight: bold;
+    color: black;
+    font-size: larger;
+  }
+
+  tr {
+    background-color: var(--secondary-color);
+  }
+
+  .payé {
+    color: green;
+  }
+
+  .non-payé {
+    color: red;
+  }
+}

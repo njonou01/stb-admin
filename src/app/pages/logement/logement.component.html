@@ -1,0 +1,80 @@
+<a routerLink="/admin/logement/details/1" style="color: white; background-color: var(--primary-color); text-decoration: none; padding: 10px 20px; border-radius: 5px; display: inline-block; margin: 20px 0;"> test</a>
+
+<div class="logement-container container">
+  <div class="section available-section">
+    <h2>Appartements à louer</h2>
+    <div class="image-gallery">
+      <img src="assets/images/housing/IMG Loyer.png" alt="Appartement 1">
+      <img src="assets/images/housing/IMG Loyer (1).png" alt="Appartement 2">
+      <img src="assets/images/housing/IMG Loyer (2).png" alt="Appartement 3">
+    </div>
+  </div>
+
+  <div class="section occupied-section">
+    <h2>Appartements occupés</h2>
+    <div class="image-gallery">
+      <img src="assets/images/housing/IMG Loyer (3).png" alt="Appartement 4">
+      <img src="assets/images/housing/IMG Loyer (4).png" alt="Appartement 5">
+      <img src="assets/images/housing/IMG Loyer (5).png" alt="Appartement 6">
+    </div>
+  </div>
+
+  <div class="section stats-section">
+    <h2>Statistiques des logements</h2>
+    <div class="stats-container">
+      <div *ngFor="let card of statsCards" class="stats-card" [ngClass]="card.type">
+        <div>
+          <div class="stats-header">
+            <div class="stats-info">
+              <span *ngFor="let info of card.info">{{ info }}</span>
+            </div>
+          </div>
+          <div class="stats-footer">
+            <span class="number">{{ card.number }}</span>
+            <span class="label">{{ card.label }}</span>
+          </div>
+        </div>
+        <div class="stats-circle">
+          <app-progress-circle class="progress-circle" [progress]="card.progress" [size]="100" [strokeWidth]="8"
+            [backgroundColor]="'#e0e0e0'" [progressColor]="card.progressColor" [textColor]="'#ffffff'">
+          </app-progress-circle>
+          <div>
+            <span class="percentage">{{ card.percentage }}</span>
+            <span class="label">{{ card.statusLabel }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="section tenant-section">
+    <h2>Liste des locataires</h2>
+    <div class="search-bar">
+      <i class="fas fa-sliders"></i>
+      <span>Étudiants</span>
+      <input type="text" placeholder="Recherche">
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Noms et prénom</th>
+          <th>Garant</th>
+          <th>Établissement</th>
+          <th>Adresse du logement</th>
+          <th>Type de logement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let etudiant of etudiants">
+          <td>{{ etudiant.nom }}</td>
+          <td>{{ etudiant.garant }}</td>
+          <td>{{ etudiant.etablissement }}</td>
+          <td>{{ etudiant.adresse }}</td>
+          <td>{{ etudiant.type }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

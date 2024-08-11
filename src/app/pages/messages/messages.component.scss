@@ -1,0 +1,47 @@
+:host {
+  .file-manager-card {
+    border: none;
+
+    .file-manager-header {
+      background-color: var(--primary-color);
+      font-weight: bold;
+      color: white;
+      padding: 1rem 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .file-manager-path,
+      .file-manager-actions {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-icon {
+        font-size: 1.1rem;
+        cursor: pointer;
+        margin-right: 0.5rem;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .file-manager-body {
+      padding: 0;
+
+
+    }
+  }
+}
+
+
+.conversation-container {
+ position: fixed;
+ right: 20px;
+ bottom: 20px;
+ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+

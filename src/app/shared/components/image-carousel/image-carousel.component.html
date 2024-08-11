@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col carousel">
+      <img [src]="images[currentIndex]" alt="Housing image">
+      <button title="previous" (click)="prev()" class="nav-button prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button title="next" (click)="next()" class="nav-button next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="indicators">
+        <span *ngFor="let image of images; let i = index" [class.active]="i === currentIndex"
+          (click)="currentIndex = i">
+        </span>
+      </div>
+    </div>
+
+    <div class="col info-summary">
+      <div class="container full-height d-flex flex-column">
+        <div class="grid-container flex-fill">
+            <div class="grid-item">
+                <label>Adresse:</label>
+            </div>
+            <div class="grid-item">
+                {{ summary.address }}
+            </div>
+            <div class="grid-item">
+                <label>Type de logement:</label>
+            </div>
+            <div class="grid-item">
+                {{ summary.type }}
+            </div>
+            <div class="grid-item">
+                <label>Frais mensuels:</label>
+            </div>
+            <div class="grid-item">
+                {{ summary.monthlyFee | currency:'EUR' }}
+            </div>
+        </div>
+    </div>
+
+    </div>
+  </div>
+
+</div>

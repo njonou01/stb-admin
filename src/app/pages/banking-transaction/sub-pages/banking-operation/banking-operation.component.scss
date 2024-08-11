@@ -1,0 +1,146 @@
+:host{
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+    border-radius:  10px 10px 0 0;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 0;
+
+
+    li {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: bold;
+      flex: 1;
+
+
+      &.active {
+        background: white;
+        color: var(--primary-color);
+      }
+    }
+  }
+
+
+
+
+
+
+  .actions{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .quick-actions div {
+    text-align: center;
+
+    i {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+  }
+  .recent-actions {
+    margin-top: 20px;
+
+    h2 {
+      color: #ff0066;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .action-item {
+      background-color: var(--blue-color);
+      border-radius: 5px;
+      padding: 15px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .icon-container {
+        width: 60px;
+        height: 60px;
+        // background-color: white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+
+        i {
+          font-size: 30px;
+          color: #333;
+        }
+
+        .calendar {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+
+          .month {
+            background-color: #007bff;
+            color: white;
+            font-size: 12px;
+            padding: 2px 0;
+            border-radius: 10px 10px 0 0;
+          }
+
+          .day {
+            font-size: 24px;
+            font-weight: bold;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+
+          }
+        }
+      }
+
+      span {
+        font-size: 14px;
+        color: #333;
+      }
+    }
+  }
+
+  .icon-folders {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-messages {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-pdf {
+    width: 60px;
+    height: 60px;
+  }
+}

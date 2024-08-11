@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid d-flex justify-content-between">
+    <div class="d-flex gap-4">
+      <!--  -->
+      <a class="navbar-brand" href="/">
+        <img src="assets/images/logo.png" alt="StudentBank" class="logo">
+      </a>
+    </div>
+    <div class="d-flex justify-content-end gap-4" id="navbarNav">
+      <button type="button" class="position-relative icon-btn">
+        <i class="fa fa-bell"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          99+
+
+          <span class="visually-hidden">unread notifications</span>
+        </span>
+      </button>
+      <div>
+        <button title="adminbtn" class="icon-btn" type="button">
+          <i class="far fa-user-circle    "></i>
+          <span>Admin</span>
+        </button>
+      </div>
+      <button title="paramsbtn" *ngIf="!(sidebarService.mobileLeftSidebarVisible$ | async)" class="icon-btn d-block d-md-none" type="button" (click)="sidebarService.toggleMobileLeftSidebar()">
+        <i class="fa fa-sliders" aria-hidden="true"></i>
+      </button>
+      <button  title="toggleleftsidebar" class="btn-toggle icon-btn d-none d-md-block" (click)="sidebarService.toggleLeftSidebar()">
+        <i class="fas"
+          [ngClass]="{'fa-sliders': !(sidebarService.mobileLeftSidebarVisible$ | async), 'fa-times': (sidebarService.mobileLeftSidebarVisible$ | async)}"></i>
+      </button>
+    </div>
+  </div>
+
+</nav>

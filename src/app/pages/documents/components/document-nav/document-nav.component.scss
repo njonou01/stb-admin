@@ -1,0 +1,27 @@
+.documents-nav {
+  margin: 0;
+  padding: 0;
+  .nav-pills {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    .nav-item {
+      flex: 1;
+
+      .nav-link {
+        border: none;
+        border-radius: 0;
+        color: var(--text-color);
+
+        &.active {
+          background-color: var(--primary-color);
+          color: white;
+          border-radius: 1rem 1rem 0 0;
+        }
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,10 @@
+<div class="universities-container">
+  <h2>Partenaires et universités</h2>
+  <div class="universities-list">
+    <div class="university" *ngFor="let university of universities">
+      <img [src]="university.imageUrl" [alt]="university.name">
+      <span>{{ university.name }}</span>
+      <button>Sélectionner</button>
+    </div>
+  </div>
+</div>

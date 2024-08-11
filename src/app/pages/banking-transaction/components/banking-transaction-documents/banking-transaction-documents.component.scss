@@ -1,0 +1,55 @@
+:host{
+  .documents {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+
+      th, td {
+        padding: 12px;
+        text-align: left;
+        background-color: #e2e2eb;
+        border-bottom: 1px solid #ffffff;
+      }
+
+      tr {
+        color: var(--text-color);
+        font-weight: 500;
+        td:first-child{
+         font-weight: bold;
+        }
+        i{
+          color: var(--primary-color);
+          padding-right: 10px;
+        }
+      }
+
+
+    }
+
+
+    .document-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+
+      button {
+        color: var(--primary-color);
+        background-color: transparent;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: var(--primary-color);
+        }
+
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

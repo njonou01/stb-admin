@@ -1,0 +1,283 @@
+.section {
+  margin-bottom: 30px;
+
+  h2 {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.table {
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+  th,
+  td {
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+  }
+
+  tr {
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid #D9D9D9;
+  }
+}
+
+.student-effectif-section {
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .chart-img {
+    width: 100%;
+  }
+
+  .student-effectif-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .student-effectif-details {
+      font-weight: bold;
+
+      .student-effectif-details-item-value {
+        color: var(--primary-color);
+      }
+
+    }
+
+    .student-effectif-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .student-effectif-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+      }
+    }
+  }
+
+  .stat-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .stat-item {
+      background: linear-gradient(to right, var(--primary-color), var(--orange-color));
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .stat-changes {
+      display: flex;
+      gap: 5px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .stat-change {
+        font-weight: bold;
+
+        .stat-change-title {
+          background-color: var(--text-color);
+          color: white;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 20px;
+
+        }
+
+        .stat-change-value {
+          background-color: var(--secondary-color);
+          color: var(--text-color);
+          text-align: center;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+
+  .progress-section {
+    .row {
+      gap: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .progress-item {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+      }
+    }
+
+  }
+}
+
+
+
+.student-account-section {
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    gap: 15px;
+
+    i {
+      margin-right: 10px;
+      color: var(--text-color);
+      font-size: 1.25rem;
+    }
+
+    span {
+      color: white;
+      font-weight: bold;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      background: rgba(255, 119, 153, 0.9) !important;
+      padding: 3px 15px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      width: 150px;
+    }
+
+    input::placeholder {
+      color: white;
+    }
+  }
+
+
+}
+
+.account-stat-section {
+  .table {
+
+    th,
+    td {
+      border: 1px solid #bbbbbb;
+    }
+
+    width: 100%;
+  }
+
+  .table-title {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+
+    i {
+      margin-right: 10px;
+      font-size: 1.25rem;
+    }
+  }
+
+  .university-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+    .university-name {
+      background-color: var(--blue-color);
+      color: white;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .university-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    .open-accounts {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--secondary-color);
+
+      .open-accounts-icon {
+        background-color: var(--primary-color);
+        font-size: 3rem;
+        padding: 15px 35px;
+        color: white;
+      }
+
+      .open-accounts-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--primary-color);
+        width: 100%;
+      }
+    }
+
+    .gender-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      flex: 1;
+
+      .gender-stat {
+        border: 1px solid #bbbbbb;
+        background-color: var(--secondary-color);
+
+        .gender-stat-icon {
+          background-color: var(--text-color);
+          color: white;
+          padding: 6px 20px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .gender-stat-details {
+          text-align: center;
+          padding: 10px;
+        }
+      }
+    }
+
+  }
+}

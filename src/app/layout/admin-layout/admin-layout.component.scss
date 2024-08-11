@@ -1,0 +1,9 @@
+:host {
+  .layout-content{
+    padding-top: calc(var(--navbar-height) + var(--banner-height));
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+
+}

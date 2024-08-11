@@ -1,0 +1,38 @@
+:host{
+  .card {
+    margin: 0 auto;
+    background: var(--secondary-color);
+    border: none;
+  }
+  .card-header {
+    cursor: pointer;
+    border: none;
+    background-color: var(--secondary-color);
+    .item-title{
+      a{
+        color: #333;
+        text-decoration: none;
+      }
+    }
+    .collapse-btn{
+      border: none;
+      background: transparent;
+      color: #333;
+    }
+  }
+
+  .list-group-item {
+    border: none;
+    padding: 0;
+    background: var(--secondary-color);
+  }
+  .list-group-item a{
+    color: #333;
+  }
+
+  .list-group-item a:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+  }
+
+}

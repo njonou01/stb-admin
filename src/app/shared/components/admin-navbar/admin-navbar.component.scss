@@ -1,0 +1,53 @@
+:host {
+  .navbar {
+    background-color: var(--navbar-bg);
+    padding: 0.5rem 0.5rem ;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--navbar-height);
+    z-index: 20;
+
+    .icon-btn {
+      background-color: transparent;
+      text-align: center;
+      font-weight: lighter;
+      display: flex;
+      gap: 5px;
+      border: none;
+      i{
+        font-size: 1.8rem;
+      }
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        max-height: 40px;
+        margin-right: 10px;
+      }
+    }
+
+
+    * {
+      color :black !important;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .btn-toggle {
+      display: block;
+    }
+    .logo {
+      max-width: 7rem;
+      margin-right: 10px;
+    }
+    .navbar{
+      padding: 1rem 0.5rem ;
+
+    }
+  }
+}

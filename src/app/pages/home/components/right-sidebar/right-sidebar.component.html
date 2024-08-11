@@ -1,0 +1,52 @@
+<app-admin-right-sidebar class="sidebar-right-section">
+  <div class="sidebar">
+    <div class="icons">
+      <i class="fas fa-envelope"></i>
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-comment"></i>
+      <i class="fas fa-cog"></i>
+    </div>
+    <div class="profile-section">
+      <div class="profile-image">
+        <img [src]="commonService.img1Sidebar" alt="Mr. Directeur">
+      </div>
+      <h2>Mr. Directeur</h2>
+      <p>&#64;lionuniversité</p>
+
+      <div class="section">
+        <h3 class="new-members-title">Nouveaux membres <a href="#" class="float-end">Voir tout</a></h3>
+        <ul class="member-list">
+          <li><img [src]="commonService.img1Sidebar" alt="David KIBA"><span>David KIBA</span><small>2 min ago</small>
+          </li>
+          <li><img [src]="commonService.img1Sidebar" alt="Boubacar S"><span>Boubacar S</span><small>18 min ago</small>
+          </li>
+          <li><img [src]="commonService.img1Sidebar" alt="Espoir N"><span>Espoir N</span><small>23 min ago</small></li>
+          <li><img [src]="commonService.img1Sidebar" alt="Amadou Sow"><span>Amadou Sow</span><small>35 min ago</small>
+          </li>
+          <li><img [src]="commonService.img1Sidebar" alt="Christ Shadow"><span>Christ Shadow</span><small>54 min
+              ago</small></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Activité récente <a href="#" class="float-end">Voir tout</a></h3>
+        <ul class="activity-list">
+          <li>
+            <img [src]="commonService.img1Sidebar" alt="Herdy">
+            <div>
+              <span>Herdy invited you to a channel</span>
+              <small>3 min ago</small>
+            </div>
+          </li>
+          <li>
+            <img [src]="commonService.img1Sidebar" alt="Edmon Boris">
+            <div>
+              <span>Edmon Boris</span>
+              <small>18 min ago</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</app-admin-right-sidebar>

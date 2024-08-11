@@ -1,0 +1,157 @@
+<ng-container class="depanage-container">
+  <section class="section stat-depanage-section">
+    <h4 class="section-title">Statistiques des dépannages</h4>
+    <div class="list-of-cards">
+      <div class="stat-card primary-orange-bg">
+        <div class="card-content d-flex ">
+          <div class="card-body">
+            <p class="stats-additional-text primary-orange-bg"> {{ donationPercentage }}% dons | {{ loanPercentage }}% prêts</p>
+
+            <h5 class="stats-count">{{ globalTotalHelps }}</h5>
+            <p class="stats-text">Total de dépannages</p>
+          </div>
+          <div class="card-icon">
+            <i class="fas fa-female float-end"></i>
+          </div>
+        </div>
+      </div>
+      <div class="stat-card blue-secondary-bg">
+        <div class="card-content d-flex ">
+          <div class="card-body">
+            <h5 class="stats-count">{{ femaleStudentHelps }}</h5>
+            <p class="stats-text">Total dépannages Etudiantes</p>
+          </div>
+          <div class="card-icon">
+            <i class="fas fa-female float-end"></i>
+            <span class="percentage-number">{{ femaleStudentPercentage }}%</span>
+          </div>
+        </div>
+      </div>
+      <div class="stat-card primary-blue-bg">
+        <div class="card-content d-flex ">
+          <div class="card-body">
+
+            <h5 class="stats-count">{{ globalTotalAmount | currency:'EUR' }}</h5>
+            <p class="stats-text">Somme Totale de dépannage</p>
+          </div>
+          <div class="card-icon">
+            <i class="fas fa-female float-end"></i>
+          </div>
+        </div>
+      </div>
+      <div class="stat-card primary-blue-bg">
+        <div class="card-content d-flex ">
+          <div class="card-body">
+
+            <h5 class="stats-count">{{ maleStudentHelps }}</h5>
+            <p class="stats-text">Total dépannages Etudiants</p>
+          </div>
+          <div class="card-icon">
+            <i class="fas fa-female float-end"></i>
+            <span class="percentage-number">{{ maleStudentPercentage }}%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="section depanages-list-section">
+    <div class="card-body">
+      <h4 class="section-title">Liste de dépannages</h4>
+      <div class="search-bar">
+        <i class="fas fa-sliders"></i>
+        <span>Étudiants</span>
+        <input type="text" placeholder="Recherche">
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Noms et prénoms</th>
+            <th>RIB</th>
+            <th>Montant</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let help of helpList">
+            <td>{{ help.name }}</td>
+            <td>{{ help.rib }}</td>
+            <td>{{ help.amount | currency:'EUR' }}</td>
+            <td>{{ help.date | date:'dd/MM/yyyy' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class=" chart-section section">
+    <img src="assets/images/chart/mobilitychart.png" alt="chart">
+  </section>
+
+  <section class="section stat-student-section">
+    <h4 class="section-title">Statistiques de l'étudiant</h4>
+    <div class="list-of-cards">
+      <div class="stat-card primary-orange-bg">
+        <div class="card-content d-flex ">
+          <div class="card-body">
+
+            <h5 class="stats-count">{{totalHelps}}</h5>
+            <p class="stats-text">Total de dépannages</p>
+          </div>
+          <div class="card-icon">
+            <i class="fas fa-female float-end"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-card primary-blue-bg">
+        <div class="card-content d-flex ">
+          <div class="card-body">
+
+            <h5 class="stats-count">{{ totalHelpAmount | currency:'EUR' }}</h5>
+            <p class="stats-text">Somme Totale de dépannage</p>
+          </div>
+          <div class="card-icon">
+            <i class="fas fa-female float-end"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section student-list-section">
+    <div class="card-content">
+      <div class="card-body">
+        <h4 class="section-title">Listes des étudiants</h4>
+        <div class="search-bar">
+          <i class="fas fa-sliders"></i>
+          <span>Dépannages</span>
+          <input type="text" placeholder="Recherche">
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nom(s)</th>
+              <th>Prénom(s)</th>
+              <th>Etablissement</th>
+              <th>RIB</th>
+              <th>Nationalité</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let student of studentList">
+              <td>{{ student.lastName }}</td>
+              <td>{{ student.firstName }}</td>
+              <td>{{ student.school }}</td>
+              <td>{{ student.rib }}</td>
+              <td>{{ student.nationality }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</ng-container>

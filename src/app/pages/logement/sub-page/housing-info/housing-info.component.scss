@@ -1,0 +1,29 @@
+:host{
+  .logement-title{
+    color: var(--primary-color);
+  }
+  .housing-info {
+    margin: 0 auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+
+
+
+    .tenantName{
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+
+    .notice-section {
+      margin-top: 20px;
+      background-color: #ccc;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  }
+}

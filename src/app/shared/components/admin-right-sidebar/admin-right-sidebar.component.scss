@@ -1,0 +1,19 @@
+@import "../../../styles/sidebar.mixins";
+
+:host {
+  .sidebar {
+    @include sidebar-base;
+    right: 0;
+
+
+    .sidebar-content {
+      @include sidebar-content;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .sidebar {
+      display: none;
+    }
+  }
+}

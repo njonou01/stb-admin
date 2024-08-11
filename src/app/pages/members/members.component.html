@@ -1,0 +1,29 @@
+<div class="group-dashboard">
+  <div class="group-news" *ngIf="groupNews">
+    <button class="close-btn" (click)="closeGroupNews()">×</button>
+    <h2>{{ groupNews.title }}</h2>
+    <p>{{ groupNews.content }}</p>
+    <button class="read-more-btn">Read more</button>
+  </div>
+
+  <h2 class="members-title">Listes des membres</h2>
+
+  <div class="members-grid">
+    <div class="member-card add-member" (click)="addMember()">
+      <div class="add-icon">+</div>
+      <p>Ajouter</p>
+    </div>
+
+
+    <div class="member-card" *ngFor="let member of members">
+      <img [src]="member.imageUrl" [alt]="member.name">
+      <div class="member-info">
+        <h3>{{ member.name }}</h3>
+        <p>{{ member.function }}</p>
+      </div>
+      <button class="menu-btn" (click)="openMemberMenu(member)">⋮</button>
+    </div>
+  </div>
+
+  <button class="show-more-btn" (click)="showMoreMembers()">Voir plus</button>
+</div>

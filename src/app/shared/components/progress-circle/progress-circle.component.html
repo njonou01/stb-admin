@@ -1,0 +1,26 @@
+<div class="progress-circle" [style.width.px]="size" [style.height.px]="size">
+  <svg [attr.width]="size" [attr.height]="size">
+    <circle
+      [attr.cx]="size / 2"
+      [attr.cy]="size / 2"
+      [attr.r]="radius"
+      [attr.stroke-width]="strokeWidth"
+      [attr.stroke]="backgroundColor"
+      [attr.fill]="backgroundColor"
+      fill="none"
+    ></circle>
+    <circle
+      [attr.cx]="size / 2"
+      [attr.cy]="size / 2"
+      [attr.r]="radius"
+      [attr.stroke-width]="strokeWidth"
+      [attr.stroke]="progressColor"
+      fill="none"
+      [style.strokeDasharray]="circumference"
+      [style.strokeDashoffset]="dashoffset"
+    ></circle>
+  </svg>
+  <div class="progress-text" [style.color]="textColor" [style.fontSize.px]="textSize">
+    {{ progress }}%
+  </div>
+</div>

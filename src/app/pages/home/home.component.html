@@ -1,0 +1,26 @@
+<app-right-sidebar></app-right-sidebar>
+<div class="container ">
+  <div class="row">
+    <div class="col-12">
+      <div class="graph-container">
+        <img [src]="commonService.chartImg" alt="Graphique" class="img-fluid">
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-options">
+    <h2 class="my-4">Options</h2>
+    <div class="row">
+      <div class="col-6" *ngFor="let card of CARDS_DATA">
+        <div class="card">
+          <img [src]="card.imageUrl" class="card-img-top" [alt]="card.title">
+          <div class="card-body">
+            <h5 class="card-title">{{ card.title }}</h5>
+            <p class="card-text">{{ card.description }}</p>
+            <p class="card-text"><small class="text-muted">{{ card.members }}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="housing-info container">
+  <h2 class="logement-title">Logement</h2>
+  <h1 class="tenantName">{{ housing.tenantName }}</h1>
+
+  <app-image-carousel [images]="housing.images" [summary]="summary"></app-image-carousel>
+
+
+  <div>
+    <app-tab-navigation [tabs]="['insurance', 'deposit', 'documents']" [activeTab]="activeTab"
+      (tabChange)="setActiveTab($event)">
+    </app-tab-navigation>
+
+    <app-info-table [data]="housing[activeTab]" [columns]="getColumns(activeTab)">
+    </app-info-table>
+  </div>
+
+
+  <div class="notice-section">
+    <h3>Préavis</h3>
+    <p>Date: {{ housing.notice.date | date:'dd/MM/yyyy' }}</p>
+    <p>Délai: {{ housing.notice.delay }}</p>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<table class="info-table">
+  <thead>
+    <tr>
+      <th *ngFor="let column of columns">{{ column.label }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data">
+      <td *ngFor="let column of columns">
+        <ng-container [ngSwitch]="column.key">
+          <span *ngSwitchCase="'date'">{{ row[column.key] | date:'dd/MM/yyyy' }}</span>
+          <span *ngSwitchCase="'amount'">{{ row[column.key] | currency:'EUR' }}</span>
+          <span *ngSwitchCase="'status'" [class]="row[column.key].toLowerCase()">
+            {{ row[column.key] }}
+          </span>
+          <span *ngSwitchDefault>{{ row[column.key] }}</span>
+        </ng-container>
+      </td>
+    </tr>
+  </tbody>
+</table>

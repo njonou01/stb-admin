@@ -1,0 +1,23 @@
+:host {
+  .content {
+    margin-left: var(--sidebar-width);
+    margin-right: var(--sidebar-width);
+    transition: all 0.3s;
+    overflow-x: hidden;
+    padding: 0;
+    margin-top: 0;
+
+    &.expanded-left {
+      margin-left: var(--sidebar-left-collapsed-width);
+    }
+
+
+  }
+
+  @media (max-width: 991px) {
+    .content {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
