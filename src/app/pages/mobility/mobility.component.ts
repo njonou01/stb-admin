@@ -6,16 +6,16 @@ import { PartnersUniversitiesComponent } from "../partners-universities/partners
 import { CarouselComponent } from "../../shared/components/carousel/carousel.component";
 import { CarouselItemComponent } from "../../shared/components/carousel-item/carousel-item.component";
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-mobility',
   standalone: true,
-  imports: [CommonModule, MobilityChartComponent, StatsCardsComponent, CandidatesListComponent, PartnersUniversitiesComponent, CarouselComponent, CarouselItemComponent],
+  imports: [CommonModule,RouterLink,  MobilityChartComponent, StatsCardsComponent, CandidatesListComponent, PartnersUniversitiesComponent, CarouselComponent, CarouselItemComponent],
   templateUrl: './mobility.component.html',
   styleUrl: './mobility.component.scss'
 })
 export class MobilityComponent {
-  title = 'Mobility';
   items = [
     { id: 1, title: 'Item 1', content: 'Content 1' },
     { id: 2, title: 'Item 2', content: 'Content 2' },

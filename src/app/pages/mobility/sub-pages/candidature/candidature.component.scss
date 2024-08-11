@@ -1,0 +1,112 @@
+.candidature-card {
+  border: none;
+  .p-3 {
+    padding: 1rem;
+  }
+  .header {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-weight: bold;
+  }
+
+  .body {
+
+    .info-section,
+    .candidatures-section,
+    .documents-section,
+    .message-section {
+      margin: 1.5rem 0 ;
+    }
+
+    .personal-documents,
+    .academic-documents {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+      button {
+        background: var(--secondary-color);
+        border: none;
+        color: #333;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+
+        i {
+          color: var(--primary-color);
+          font-size: 20px;
+        }
+      }
+    }
+
+    .candidatures-section {
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 0;
+      .section-title{
+        color: white;
+        background-color: var(--primary-color);
+        padding: 0.75rem 1rem;
+        margin: 0;
+      }
+      .list-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .list-group-item {
+          border: none;
+          background-color: var(--secondary-color);
+          padding: 0.75rem 1rem;
+          color: var(--text-color);
+          font-weight: bold;
+
+
+          &:not(:last-child) {
+            border-bottom: 1px solid #dee2e6;
+          }
+
+          .badge {
+            background-color: var(--primary-color);
+          }
+          .arrow-right-link {
+            color: var(--text-color);
+          }
+        }
+      }
+    }
+
+
+
+
+
+    form {
+      .form-control {
+        border-width: 2px;
+
+        &:focus {
+          border-color: var(--primary-color);
+          box-shadow: 0 0 0 0.2rem rgba(var(--primary-color), 0.25);
+        }
+      }
+
+      input {
+        background-color: var(--secondary-color);
+        font-weight: 500;
+      }
+
+      .send-message-btn {
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: bold;
+      }
+
+      textarea {
+
+        resize: vertical;
+        background-color: var(--secondary-color);
+        font-weight: 500;
+      }
+    }
+  }
+}

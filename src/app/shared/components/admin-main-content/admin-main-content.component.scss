@@ -1,7 +1,10 @@
+
 :host {
+  .add-right-sidebar {
+    margin-right: var(--sidebar-width);
+  }
   .content {
     margin-left: var(--sidebar-width);
-    margin-right: var(--sidebar-width);
     transition: all 0.3s;
     overflow-x: hidden;
     padding: 0;

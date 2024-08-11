@@ -2,7 +2,7 @@
   <app-admin-navbar></app-admin-navbar>
   <app-admin-left-sidebar></app-admin-left-sidebar>
   <app-banner [text]="bannerTitle"></app-banner>
-  <app-admin-main-content>
+  <app-admin-main-content [hasRightSidebar]="hasRightSidebar">
     <router-outlet></router-outlet>
   </app-admin-main-content>
 </section>

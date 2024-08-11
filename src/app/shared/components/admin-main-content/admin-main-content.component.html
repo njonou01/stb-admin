@@ -1,6 +1,5 @@
 <div class="content"
-  [ngClass]="{'expanded-left': sidebarService.leftSidebarCollapsed$ | async , 'expanded-right': sidebarService.rightSidebarCollapsed$ | async}">
+  [ngClass]="{'expanded-left': sidebarService.leftSidebarCollapsed$ | async , 'add-right-sidebar': hasRightSidebar}">
   <app-page-banner-navbar></app-page-banner-navbar>
-
-  <ng-content select="router-outlet"></ng-content>
+  <ng-content select="router-outlet" class="container"></ng-content>
 </div>

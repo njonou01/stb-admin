@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SidebarService } from '../../services/sidebar.service';
 import { PageBannerNavbarComponent } from "../page-banner-navbar/page-banner-navbar.component";
 
@@ -12,6 +12,7 @@ import { PageBannerNavbarComponent } from "../page-banner-navbar/page-banner-nav
 
 })
 export class AdminMainContentComponent {
+  @Input() hasRightSidebar!: boolean;
   constructor(public sidebarService: SidebarService) {}
 
 }

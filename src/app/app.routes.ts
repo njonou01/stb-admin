@@ -21,8 +21,7 @@ export const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
-        data: { bannerTitle: 'Accueil' }
+        redirectTo: '/admin/home'
       },
       {
         path: 'documents',
@@ -48,7 +47,7 @@ export const routes: Routes = [
       {
         path: 'home',
         loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
-        data: { bannerTitle: 'Accueil' }
+        data: { bannerTitle: 'Accueil' , hasRightSidebar: true }
       },
       {
         path: 'banking',
@@ -91,7 +90,17 @@ export const routes: Routes = [
       },
       {
         path: 'mobility',
-        loadComponent: () => import('./pages/mobility/mobility.component').then(m => m.MobilityComponent),
+        children: [
+          {
+            path: '',
+            loadComponent: () => import('./pages/mobility/mobility.component').then(m => m.MobilityComponent),
+            pathMatch: 'full'
+          },
+          {
+            path: 'candidate/:id',
+            loadComponent: () => import('./pages/mobility/sub-pages/candidature/candidature.component').then(m => m.CandidatureComponent)
+          }
+        ],
         data: { bannerTitle: 'Mobilité' }
       },
       {

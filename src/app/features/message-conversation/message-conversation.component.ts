@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-message-conversation',
@@ -14,14 +14,17 @@ export class MessageConversationComponent {
   selectedAccount: string = 'Sélectionner un compte';
   object: string = '';
   message: string = '';
+  isFormVisible = true;
+
+
+  closeForm() {
+    this.isFormVisible = false;
+  }
+
+
 
   sendMessage() {
     console.log('Message envoyé');
     // Logique d'envoi du message
-  }
-
-  closeForm() {
-    console.log('Formulaire fermé');
-    // Logique pour fermer le formulaire
   }
 }

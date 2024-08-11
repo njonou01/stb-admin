@@ -18,6 +18,7 @@ import { filter } from 'rxjs';
 export class AdminLayoutComponent {
   isRightSidebarShow!: boolean;
   bannerTitle!: string;
+  hasRightSidebar!: boolean;
 
   constructor(private router: Router, private ActivatedRoute: ActivatedRoute) {
 
@@ -40,6 +41,7 @@ export class AdminLayoutComponent {
 
     route.data.subscribe(data => {
       this.bannerTitle = data['bannerTitle'];
+      this.hasRightSidebar = data['hasRightSidebar'] || false;
     });
   }
 }
