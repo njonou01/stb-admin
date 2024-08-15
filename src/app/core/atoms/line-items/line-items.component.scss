@@ -1,0 +1,42 @@
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   width: 100%;
+   height: 10px;
+   
+   
+
+  }
+  
+  .ligne-horizontale {
+    border: none;
+    height: 5px;
+    width: 15%;
+    
+  }
+
+  .black{
+    background-color: rgb(57, 53, 53);
+
+  }
+
+  .white{
+    background-color: white;
+  }
+  
+  .active {
+    background-color: rgba(237, 23, 76, 1);
+    height: 6px;
+    width: 15%;
+    border: none;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  

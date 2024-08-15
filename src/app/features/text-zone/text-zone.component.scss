@@ -1,0 +1,78 @@
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    
+   
+    max-width: 1000px;
+    padding: 1%;
+    padding-bottom: 0.2%;
+    
+    
+
+   
+    
+
+    .form-item{
+        
+    }
+
+    img{
+        width: 14%;
+    }
+
+    .form-container{
+        display: flex;
+        flex: 1 1 10px;
+        justify-content: flex-end;
+        width: 25%;
+        background-color: rgba(226, 226, 235, 1);
+        gap: 8%;
+        position: relative;
+        left: 70%;
+        font-size: 2em;
+    }
+    .sub-container{
+        overflow: hidden;
+        background-color: rgba(226, 226, 235, 1);
+       
+        height: 100%;
+        
+
+    }
+
+    textarea{
+        flex: 1 1 200px;
+        height: 90%;
+        background-color: rgba(226, 226, 235, 1);
+        width: 100%;
+        border: none;
+        font-size: 3em;
+        padding-left: 2%;
+        padding-right: 2%;
+
+        
+
+    }
+   
+
+  
+}
+.i{
+    font-style: italic;
+}
+
+.b{
+    font-weight: 700;
+}
+
+h2{
+    font-weight: bold;
+}
+
+.radius{
+    border-radius: 50px;
+        
+}

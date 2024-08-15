@@ -1,0 +1,16 @@
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 600px;
+  font-size: 3em;
+font-weight: bold;
+text-align: center;
+}
+
+p{
+    color: rgba(237, 23, 76, 1);
+}

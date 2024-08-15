@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="left">
+        <h2>Arrière plan</h2>
+        <div class="choice">
+            <h3 (click)="selectView('view1')">Theme</h3>
+            <h3 (click)="selectView('view2')">couleur de fond</h3>
+            <h3 (click)="selectView('view3')">perdonaliser</h3>
+
+        </div>
+        
+    </div>
+    <div class="right" [ngSwitch]="selectedView">
+        <div *ngSwitchCase="'view1'">
+            
+            <div class="theme">
+                <div *ngFor="let theme of themes" class="theme-item">
+                    <app-theme [srcTheme]="theme">
+
+                    </app-theme>
+
+                </div>
+                
+               
+                
+            </div>
+          </div>
+          <div class="color" *ngSwitchCase="'view2'">
+            <input *ngFor="let color of colorItem" type="color" [value]="color" name="" id="">
+          </div>
+          <div class="add-picture" *ngSwitchCase="'view3'">
+            <img src="../.././../../assets/add-picture-icon.png" alt="">
+            <p>Ajouter photo</p>
+          </div>
+          <div *ngSwitchDefault>
+            <h2>Vue par défaut</h2>
+            <p>Sélectionnez une vue pour voir le contenu.</p>
+          </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+      <hr *ngFor="let line of lines; let i = index" [class]="color"  [ngClass]="{'active': i === activeIndex, 'ligne-horizontale':  i !== activeIndex}">
+</div>
+
+
+  
+  <div class="buttons" *ngIf="buttons">
+    
+
+    <app-red-button (click)="changeColor('left')" [content]="'Left'"></app-red-button>
+    <app-red-button (click)="changeColor('right')" [type]="'red'" [content]="'Right'"></app-red-button>
+
+
+  </div>

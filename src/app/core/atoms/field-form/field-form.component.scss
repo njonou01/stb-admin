@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20%;
+    position: relative;
+    width: 100%;
+    
+   
+}
+
+
+
+.sub-container{
+    width: 100%;
+    
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgba(226, 226, 235, 1);
+}
+
+img{
+    width: 20%;
+    max-width: 65px;
+}
+input{
+    flex-grow: 1;
+    background-color: rgba(226, 226, 235, 1);
+    border-style: none;
+    width: 100%;
+}

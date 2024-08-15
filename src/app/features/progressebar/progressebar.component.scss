@@ -1,0 +1,52 @@
+.progresss-container {
+    text-align: center;
+    
+    margin: 20px;
+  }
+  
+  .progresss-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .step {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    color: rgba(237, 23, 76, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  
+  .line {
+    width: 100px;
+    height: 5px;
+    background-color: rgba(237, 23, 76, 1);
+  }
+  
+  .step.active .circle {
+    background-color: #000000; 
+    color: white;
+  }
+  
+  .step.active ~ .line {
+    background-color: #bdbdbd; 
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  

@@ -1,164 +1,79 @@
-<div class="container m-auto">
-    <div class="registration-container" style="background-color: #E2E2EB;">
-        <h1>ENREGISTREMENT</h1>
+<div class="sup-form-container">
+    <app-progressebar   [currentStep]="currentStep" [steps]="[1, 2, 3, 4]"></app-progressebar>
+    <h2>Formulaire d'enregistrement</h2>
 
-        <div class="stepper d-flex justify-content-between">
-            <div class="step" [class.active]="currentStep >= 1">1</div>
-            <div class="step" [class.active]="currentStep >= 2">2</div>
-            <div class="step" [class.active]="currentStep >= 3">3</div>
-            <div class="step" [class.active]="currentStep >= 4">4</div>
-        </div>
-        <div class="d-flex justify-content-center my-4">
-            <h3 class="mb-4">Formulaire d'enregistrement</h3>
-        </div>
+    <div class="form-container" [ngSwitch]="currentStep" *ngIf="currentStep!==3">
 
-        <form [ngSwitch]="currentStep" style="background-color: #ffffff;">
-            <div *ngSwitchCase="1" class="form-card user-info mb-3">
-                <div class="mb-3">
-                    <label for="universite" class="form-label">Nom de l'université</label>
-                    <div class="input-group">
-                        <span class="input-group-text"><i class="fas fa-user"></i></span>
-                        <input class="form-control" type="text" class="form-control" id="universite">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col">
-                        <label for="telephone" class="form-label">Numéro de téléphone</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                            <input type="tel" class="form-control" id="telephone">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <label for="email" class="form-label">Adresse mail</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                            <input type="email" class="form-control" id="email">
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col">
-                        <label for="password" class="form-label">Mot de passe</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                            <input type="password" class="form-control" id="password">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <label for="adresse" class="form-label">Adresse</label>
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-                            <input type="text" class="form-control" id="adresse">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div *ngSwitchCase="2" class="form-card contact-form mb-3">
-                <div class="row">
-                    <div class="col">
-                        <label for="universite" class="form-label">Nom </label>
-                        <div class="input-group">
-                            <span class="input-group-text" for="lastName"><i class="fas fa-user"></i></span>
-                            <input class="form-control" type="text" id="lastName" placeholder="Nom du responsable">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <label for="firstName" class="form-label">Prénom </label>
-                        <div class="input-group">
-                            <span class="input-group-text" for="firstName"><i class="fas fa-user"></i></span>
-                            <input class="form-control" type="text" id="firstName" placeholder="Prénom du responsable">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label for="phone" class="form-label">Téléphone </label>
-                        <div class="input-group">
-                            <span class="input-group-text" for="phone"><i class="fas fa-phone"></i></span>
-                            <input class="form-control" type="tel" id="phone" placeholder="Numéro de téléphone">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <label for="email" class="form-label">Email </label>
-                        <div class="input-group">
-                            <span class="input-group-text" for="email"><i class="fas fa-envelope"></i></span>
-                            <input class="form-control" type="email" id="email" placeholder="Adresse email">
-                        </div>
-                    </div>
-                    <label for="address" class="form-label">Adresse </label>
-                    <div class="input-group">
-                        <span class="input-group-text" for="address"><i class="fas fa-map-marker-alt"></i></span>
-                        <input class="form-control" type="text" id="address" placeholder="Adresse">
-                    </div>
+        <div class="top" *ngSwitchCase="0">
+      
+            <app-field-form content="Nom de l'univertité"></app-field-form>
+            
+
+                <div class="sub-top">
+                    <app-field-form content="Numéro de téléphone" srcIcon="../../../assets/images/field-form/phone.png"></app-field-form>
+                    <app-field-form content="Numéro de téléphone" srcIcon="../../../assets/images/field-form/mail.png"></app-field-form>
+                    
 
                 </div>
-            </div>
-            <div *ngSwitchCase="3" class="form-card post-form mb-3">
-
-                <label for="postTitle" class="form-label">Titre du post</label>
-                <div class="input-group">
-                    <span class="input-group-text" for="postTitle"><i class="fas fa-user"></i></span>
-                    <input class="form-control" type="text" id="postTitle" placeholder="Titre du post">
-                </div>
-                <div class="input-group d-flex flex-column">
-                    <label for="description" class="form-label">Description</label>
-                    <textarea id="description"></textarea>
-                </div>
-
-                <label for="image" class="form-label">Image</label>
-                <div class="input-group">
-                    <span class="input-group-text" for="image"><i class="fas fa-upload"></i></span>
-                    <input class="form-control d-none" type="file" id="image">
-                </div>
-
-            </div>
-            <div *ngSwitchCase="4" class="form-card university-info mb-3">
-                <div class="row">
-                    <div class="col">
-                        <h2>Université de Lyon</h2>
-                        <div class="input-group d-flex  align-items-center">
-                            <span class="input-group-text"> <i class="fas fa-map-marker-alt"></i></span>
-                            <span>00, rue Pasteur 00000 LYON</span>
-                        </div>
-                        <div class="input-group d-flex  align-items-center">
-                            <span class="input-group-text"> <i class="fas fa-user"></i></span>
-                            <span>Responsable : Dupont</span>
-                        </div>
-                        <div class="input-group d-flex  align-items-center">
-                            <span class="input-group-text"> <i class="fas fa-envelope"></i> </span>
-                            <span>partenaires&#64;univ-lyon1.fr</span>
-                        </div>
-                        <div class="input-group d-flex  align-items-center">
-                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                            <span>+33 (0)0 00 00 00 00</span>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h2>Congrès scientifique</h2>
-                        <p>Des programmes d'immersion alternatifs aux programmes Erasmus. Partez étudier une langue dans
-                            autre
-                            pays
-                            de votre choix</p>
-                        <p>Des programmes d'immersion alternatifs aux programmes Erasmus. Partez étudier une langue dans
-                            autre
-                            pays
-                            de votre choix</p>
-                    </div>
+                <div class="sub-top">
+                    <app-field-form content="Mot de Passe" srcIcon="../../../assets/images/field-form/lock.png"></app-field-form>
+                    <app-field-form content="Mot de Passe" srcIcon="../../../assets/images/field-form/map.png"></app-field-form>
 
                 </div>
+          
 
-            </div>
-        </form>
-
-        <div class="buttons">
-            <button (click)="previousStep()" [disabled]="currentStep === 1">Précédent</button>
-            <button *ngIf="currentStep !== totalSteps" (click)="nextStep()" [disabled]="currentStep === totalSteps">
-                {{ currentStep === totalSteps? 'Terminer' : 'Suivant' }}
-            </button>
-            <button *ngIf="currentStep === totalSteps"
-            (click)="submitForm()"
-            class="btn btn-danger">Terminer</button>
-        </div>
+       
     </div>
+    <div *ngSwitchCase="1" class="top">
+        <div class="sub-top">
+            <app-field-form content="Nom du responsable"></app-field-form>
+            <app-field-form content="Nom du responsable" ></app-field-form>
+            
+        </div>
+        <div class="sub-top">
+            <app-field-form content="Numero de telephone" srcIcon="../../../assets/images/field-form/lock.png"></app-field-form>
+            <app-field-form content="Adresse mail" srcIcon="../../../assets/images/field-form/map.png"></app-field-form>
+
+        </div>
+        <app-field-form content="Adresse" srcIcon="../../../assets/images/field-form/map.png"></app-field-form>
+            
+
+        
+        
+      </div>
+    
+      <!-- Étape 3 -->
+      <div *ngSwitchCase="2" class="top">
+        <app-field-form content="titre du poste"></app-field-form>
+
+
+        <div class="description-container">
+        <p>Description.</p>
+        <input type="text" name="" id="">
+
+        </div>
+        <div class="download-container">
+            <p>Image</p>
+            <img src="../../../assets/images/field-form/download.png" alt="" srcset="">
+        </div>
+        
+        
+      </div>
+    
+   
+      <div *ngSwitchDefault>
+        <h3>Étape inconnue</h3>
+      </div>
+        <div class="bottom">
+            <app-red-button (click)="prevStep()" type="red" content="précédent"></app-red-button>
+            <app-red-button (click)="nextStep()" type="red" content="suivant"></app-red-button>
+        </div>
+   
+
+    </div>
+    <app-end-step *ngIf="currentStep===3"></app-end-step>
+
 </div>
+
+
+

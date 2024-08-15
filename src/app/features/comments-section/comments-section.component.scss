@@ -1,0 +1,35 @@
+.commentsection-componet{
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.comment-container{
+   
+    width: 95%;
+    min-height: 200px;
+    height: 100%;
+    max-height: 300px;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+.title-component{
+    width: 68%;
+    text-align: center;
+    font-size: 1.5em;
+}
+.line{
+    border: 2.5px solid black;
+}
+app-red-button{
+    flex: 0 1 300px;
+    max-width: 300px;
+}
+
+
+
+ 

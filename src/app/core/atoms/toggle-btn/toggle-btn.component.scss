@@ -1,0 +1,45 @@
+/* app.component.css */
+.toggle-switch {
+    width: 100%;
+    max-width: 90px;
+    min-width: 60px;
+    height: 30px;
+    background-color: rgba(126, 126, 126, 1);
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .toggle-switch .slider {
+    width: 40%;
+    height: 28px;
+    background-color: rgba(237, 23, 76, 1);
+    border-radius: 45%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .toggle-switch .slider.active {
+    left: 60%; 
+    
+  }
+
+  .toggle-switch .slider:hover{
+    scale: 1.1;
+    background-color: rgb(236, 64, 107);
+
+    
+
+  }
+
+  
+  
+  .toggle-switch.active {
+    
+    background-color: #4CAF50;
+    
+  }
+  

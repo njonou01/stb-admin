@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="top" >
+        
+        
+            <div class="circle" *ngFor="let item of srcTheme; let i = index" [ngClass]="{'bleu': i===currentIndex, 'white': i!==currentIndex, 'Undisplay': this.srcTheme.length===1}" >
+
+            </div>
+            
+
+       
+    </div>
+
+    <app-red-button content="choisir" type="red"></app-red-button>
+    
+
+    
+    <img [src]="srcTheme[currentIndex]" alt="">
+</div>

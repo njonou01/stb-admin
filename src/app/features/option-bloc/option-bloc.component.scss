@@ -1,0 +1,53 @@
+.container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    gap: 2%;
+    border-radius: 40px;
+    padding: 1%;
+    padding-top: 0.5%;
+    min-width: 500px;
+    width: 100%;
+}
+
+.container-sup{
+    background-color: rgba(226, 226, 235, 1);
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 1%;
+}
+
+.line{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    background-color: white;
+    margin-top: 3.5%;
+}
+
+h2{
+    font-size: 3em;
+    color: rgba(237, 23, 76, 1);
+}
+
+h3{
+    font-size: 2em;
+    font-weight: 100;
+}
+
+p{
+    color: rgba(237, 23, 76, 1);
+}
+
+.dividion{
+    border: 2px solid black;
+    width: 90%;
+}

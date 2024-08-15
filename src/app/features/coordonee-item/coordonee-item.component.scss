@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    width: 100%;
+    background-color: rgba(237, 23, 76, 1);
+    max-width: 3000px;
+    align-items: center;
+    align-items: stretch;
+
+}
+p{
+    background-color: pink;
+    color: white;
+    flex: 50 1 10px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+   
+}
+
+img{
+    width: 20%;
+}

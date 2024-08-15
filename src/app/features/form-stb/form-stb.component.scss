@@ -1,0 +1,16 @@
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10%;
+}
+
+.form-container{
+    min-width: 865px;
+    min-height: 549px;
+    background-color: rgb(155, 142, 142);
+    border-radius: 40px;
+    
+}

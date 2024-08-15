@@ -1,0 +1,21 @@
+.container{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    font-size: 1.5em;
+
+}
+
+img{
+    width: 10%;
+    border-radius: 70%;
+    flex-shrink: 0;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    flex-grow: 1;
+    padding-left: 5%;
+}

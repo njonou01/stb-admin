@@ -1,0 +1,32 @@
+.top-container{
+    display: flex;
+    width: 100%;
+    gap: 2%;
+    align-items: center;
+}
+
+.container{
+    box-shadow: 1px 1px 15px;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 350px;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0.5%;
+
+}
+h2{
+    color: rgba(237, 23, 76, 1);
+    font-size: 2em;
+}
+p{
+    font-size: 2em;
+}
+
+.bottom-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
