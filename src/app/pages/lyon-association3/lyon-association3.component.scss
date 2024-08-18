@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.sup-container{
+    width: 100%;
+    .sub-container{
+        margin-left: 10%;
+        margin-right: 10%;
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-height: 100vh;
+        
+        
+        .btn{
+            display: flex;
+            justify-content: flex-start;
+        }
+    
+
+
+        .card-container{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            gap: 5%;
+            margin-top: 2%;
+            
+
+
+            .info{
+                max-width: 47%;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 2%;
+                
+            }
+        }
+    }
+}
+
+app-profil-info{
+    margin-top: 3%;
+}
+.sub-container::-webkit-scrollbar {
+    width: 30px;
+    
+
+  }
+
+  .sub-container::-webkit-scrollbar-track {
+    background: rgba(217, 217, 217, 1);
+    border-radius: 300px;
+    padding: 5px;
+
+
+  }
+
+ 
+  .sub-container::-webkit-scrollbar-thumb {
+    background: rgba(252, 91, 91, 1); 
+    border-radius: 20px;
+    width: 50%;
+    margin: 10px;
+  }
+
+  .sub-container::-webkit-scrollbar-thumb:hover {
+    background: #b02828; 
+  }

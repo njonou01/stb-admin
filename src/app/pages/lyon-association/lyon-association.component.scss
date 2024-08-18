@@ -1,0 +1,34 @@
+div{
+    width: 100%;
+}
+
+.mini-text-zone{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    gap: 85%;
+}
+.lyon-association-container{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+p{
+    margin-top: 3%;
+    font-size: 2em;
+}
+
+input{
+    width: 100%;
+    background-color: rgba(226, 226, 235, 1);
+    padding: 7px;
+    height: 4vw;
+    border-style: none;
+    font-size: 2.4em;
+
+}

@@ -1,6 +1,6 @@
 import { isPlatformBrowser,CommonModule } from '@angular/common';
 import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
-import { RedButtonComponent } from '../../../atoms/buttons/red-button/red-button.component';
+import { RedButtonComponent } from '@/core/atoms/buttons/red-button/red-button.component';
 
 @Component({
   selector: 'app-theme',
@@ -10,7 +10,7 @@ import { RedButtonComponent } from '../../../atoms/buttons/red-button/red-button
   styleUrl: './theme.component.scss'
 })
 export class ThemeComponent {
-  @Input() srcTheme=["../../../../../assets/themes/theme2.png"
+  @Input() srcTheme=["../../../../assets/images/themes/theme2.png"
     
 
   ]

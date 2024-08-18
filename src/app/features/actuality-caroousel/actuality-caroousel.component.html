@@ -1,16 +1,16 @@
 <div class="Acontainer" [class.Grey-background]="grayBack">
-    <img (click)="prevSlide()" class="left" src="../../../../assets/case-partner/lefttarrow.png" alt="" srcset="">
+    <img (click)="prevSlide()" class="left" src="../../../assets/images/case-partner/lefttarrow.png" alt="left row" srcset="">
     <div class="burguvia-content" *ngFor="let i of [-1, 0, 1]" [ngClass]="{'active': i === 0}">
-        <img class="img-tiny" src="../../../../assets/actuality-img.png" alt="">
+        <img class="img-tiny" src="../../../assets/images/actuality-img.png" alt="dd">
         
             <H2>Actualité</H2>
             <P>{{slides[getSlideIndex(i)].description}}</P>
             
-        <img   class="img-cover" [src]="slides[getSlideIndex(i)].srcBack" alt="">
-        <img class="pen-img" src="../../../../assets/pencil/pen.png" alt="pen" srcset="">
+        <img   class="img-cover" [src]="slides[getSlideIndex(i)].srcBack" alt="cdc">
+        <img class="pen-img" src="../../../assets/images/pencil/pen.png" alt="pen" srcset="">
      
     </div>
-    <img  (click)="nextSlide()" class="right" src="../../../../assets/case-partner/rightarrow.png">
+    <img  (click)="nextSlide()" class="right" src="../../../assets/images/case-partner/rightarrow.png">
 
 
   </div>

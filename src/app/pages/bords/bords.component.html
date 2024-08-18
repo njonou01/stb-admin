@@ -1,0 +1,28 @@
+<div class="bord-container">
+    <div class="sub-bord-container">
+        <div class="chart-container">
+            <app-graphboard [nodes]="chartNodes"></app-graphboard>
+
+        </div>
+        <app-red-button (click)="addRandomNode()"></app-red-button>
+
+        <h2>Option</h2>
+
+        <div class="grid-container">
+            <app-caseoption class="option"
+            [description]="'A community for VR and novices alike, regular and friendly chat.'">
+            </app-caseoption>
+            <app-caseoption  class="option"
+            [description]="'A community for VR and novices alike, regular and friendly chat.'">
+            </app-caseoption>
+            <app-caseoption  class="option"
+            [description]="'A community for VR and novices alike, regular and friendly chat.'">
+            </app-caseoption>
+            <app-caseoption  class="option"
+            [description]="'A community for VR and novices alike, regular and friendly chat.'">
+            </app-caseoption>
+
+        </div>
+    </div>
+
+</div>

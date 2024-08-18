@@ -1,0 +1,39 @@
+.bord-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.sub-bord-container{
+    width: 90%;
+    min-height: 700px;
+}
+
+
+.chart-container{
+    background-color: rgb(38, 32, 48);
+    border-radius: 50px;
+    padding: 3%;
+    margin-bottom: 2%;
+}
+
+
+.grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    gap:20px 20px;
+    margin-top: 1%;
+}
+
+.option{
+    width: 40%;
+}
+h2{
+    margin-top: 2%;
+
+    color: rgba(237, 23, 76, 1);
+}

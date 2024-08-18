@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RedButtonComponent } from '../../atoms/buttons/red-button/red-button.component';
+import { RedButtonComponent } from '@/core/atoms/buttons/red-button/red-button.component';
 
 @Component({
   selector: 'app-burgubia-section',

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommentComponent } from '../comment/comment.component';
-import { RedButtonComponent } from '../../atoms/buttons/red-button/red-button.component';
+import { RedButtonComponent } from '@/core/atoms/buttons/red-button/red-button.component';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 @Component({

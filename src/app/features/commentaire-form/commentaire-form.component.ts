@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { RedButtonComponent} from '../../atoms/buttons/red-button/red-button.component';
-import { TextZoneComponent } from '../../molecules/text-zone/text-zone.component';
-import { ProfilStateComponent } from '../../atoms/profil-state/profil-state.component';
+import { RedButtonComponent } from '@/core/atoms/buttons/red-button/red-button.component';
+import { TextZoneComponent } from '../text-zone/text-zone.component';
+import { ProfilStateComponent } from '@/core/atoms/profil-state/profil-state.component';
 
 @Component({
   selector: 'app-commentaire-form',

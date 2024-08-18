@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { ProfilStateComponent } from '../../atoms/profil-state/profil-state.component';
+import { ProfilStateComponent } from '@/core/atoms/profil-state/profil-state.component';
 
 
 @Component({

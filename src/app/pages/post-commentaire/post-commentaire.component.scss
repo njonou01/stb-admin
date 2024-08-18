@@ -1,0 +1,35 @@
+.bottom-container{
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+}
+
+.post-commentaire-container{
+    width: 100%;
+    max-width: 800px;
+    padding: 1%;
+    
+
+    .sup-container{
+        display: flex;
+        gap: 1%;
+
+        .title{
+            align-items: stretch;
+            border-radius: 50px;
+            background-color: rgb(222, 222, 255);
+            flex: 1 1;
+
+        }
+
+        
+
+    }
+
+    .center-container{
+        min-height: 300px;
+    }
+
+    
+
+}

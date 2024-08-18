@@ -23,6 +23,7 @@ h1{
     justify-content: center;
     flex-direction: column;
     gap: 5%;
+    overflow: hidden;
     .left-item{
         width: 60%;
         
@@ -32,7 +33,7 @@ h1{
 }
 
 .right{
-
+    overflow: hidden;
     width: 55%;
     flex: 1 1;
    

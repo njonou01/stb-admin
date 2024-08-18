@@ -1,6 +1,6 @@
 import { CommonModule,isPlatformBrowser } from '@angular/common';
 import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
-import { RedButtonComponent } from '../../atoms/buttons/red-button/red-button.component';
+import { RedButtonComponent } from '@/core/atoms/buttons/red-button/red-button.component';
 import { CasesPartnerComponent } from '../cases/cases-partner/cases-partner.component';
 
 @Component({
@@ -12,7 +12,7 @@ import { CasesPartnerComponent } from '../cases/cases-partner/cases-partner.comp
 })
 export class ActualityCaroouselComponent {
   @Input() slides = [
-    { srcBack: '../../../../../assets/case-partner/partner-img.png', title: 'Université de Nante', description: 'Description 1' }
+    { srcBack: '../../../assets/images/case-partner/partner-img.png', title: 'Université de Nante', description: 'Description 1' }
     
     
   ];

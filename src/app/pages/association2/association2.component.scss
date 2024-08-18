@@ -1,0 +1,29 @@
+.association2-container{
+    width: 100%;
+
+    .sub-container{
+        width: 100%;
+        min-height: 500px;
+        margin-right: 300px;
+        margin-left: 2%;
+
+        .inner-container{
+            display: flex;
+            flex-direction: column;
+            gap: 2%;
+            align-content: center;
+         
+            margin-right: 5%;
+            min-height: 300px;
+
+
+        }
+    }
+
+}
+
+app-actulity-section{
+    margin-left: 6%;
+    margin-bottom:5% ;
+    margin-top: 6%;
+}

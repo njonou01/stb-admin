@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { RedButtonComponent } from '../../atoms/buttons/red-button/red-button.component';
-import { ProfilStateComponent } from '../../atoms/profil-state/profil-state.component';
-import { StarRateComponent } from '../../atoms/star-rate/star-rate.component';
+import { RedButtonComponent } from '@/core/atoms/buttons/red-button/red-button.component';
+import { ProfilStateComponent } from '@/core/atoms/profil-state/profil-state.component';
+import { StarRateComponent } from '@/core/atoms/star-rate/star-rate.component';
 
 
 @Component({

@@ -1,6 +1,6 @@
 .container{
     width: 100%;
-    max-width: 600px;
+    
     position: relative;
     display: flex;
     flex-direction: column;
@@ -9,6 +9,7 @@
     overflow: hidden;
     border-radius: 40px;
     min-height: 600px;
+    height: 100%;
 }
 
 .img-back{
@@ -20,6 +21,11 @@ img{
     position: absolute;
 
 
+}
+p{
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .trash-icon{
@@ -36,8 +42,8 @@ img{
 }
 
 .inform{
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 110%;
     background-color: rgba(237, 23, 76, 0.46);
     display: flex;
     flex-grow: 1;

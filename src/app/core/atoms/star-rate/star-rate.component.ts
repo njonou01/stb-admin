@@ -18,7 +18,6 @@ export class StarRateComponent {
     if(i%2!=0 && i%5==0 ){
       this.isHalf=true;
     }
-    console.log(" isHalf : "+this.isHalf);
     
   }
 

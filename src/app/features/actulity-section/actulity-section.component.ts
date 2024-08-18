@@ -1,5 +1,5 @@
 import { Component, Inject, Input, PLATFORM_ID, ViewChild } from '@angular/core';
-import { LineItemsComponent } from '../../atoms/line-items/line-items.component';
+import { LineItemsComponent } from '@/core/atoms/line-items/line-items.component';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 
@@ -17,7 +17,7 @@ export class ActulitySectionComponent {
   currentIndex = 0;
 
   @Input() slides = [
-    { srcBack: '../../../../../assets/case-partner/partner-img.png', title: 'Université de Nante', description: 'Description 1' }
+    { srcBack: '../../../assets/images/case-partner/partner-img.png', title: 'Université de Nante', description: 'Description 1' }
     
     
   ];

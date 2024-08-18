@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ToggleBtnComponent } from '../../atoms/toggle-btn/toggle-btn.component';
+import { ToggleBtnComponent } from '@/core/atoms/toggle-btn/toggle-btn.component';
 
 @Component({
   selector: 'app-option-bloc',

@@ -40,6 +40,62 @@ export const routes: Routes = [
         data: { bannerTitle: 'Membres' }
       },
       {
+        path: 'bords',
+        loadComponent: () => import('./pages/bords/bords.component').then(m => m.BordsComponent),
+        data: { bannerTitle: 'Tableau de Bord'  }
+      },
+      {
+        path: 'association',
+        loadComponent: () => import('./pages/association/association.component').then(m => m.AssociationComponent),
+        data: { bannerTitle: 'Association'  }
+      },
+      {
+        path: 'association2',
+        loadComponent: () => import('./pages/association2/association2.component').then(m => m.Association2Component),
+        data: { bannerTitle: 'Association'  }
+      },
+      {
+        path: 'poster-commentaire',
+        loadComponent: () => import('./pages/post-commentaire/post-commentaire.component').then(m => m.PostCommentaireComponent),
+        data: { bannerTitle: 'Poster un commetaire'}
+      },
+      {
+        path: 'options',
+        loadComponent: () => import('./pages/options/options.component').then(m => m.OptionsComponent),
+        data: { bannerTitle: 'Poster un commetaire'}
+      },
+      {
+        path: 'modification-info',
+        loadComponent: () => import('./pages/modify-info/modify-info.component').then(m => m.ModifyInfoComponent),
+        data: { bannerTitle: 'Modifier les infos'}
+      },
+      {
+        path: 'liste-commandes',
+        loadComponent: () => import('./pages/list-command/list-command.component').then(m => m.ListCommandComponent),
+        data: { bannerTitle: 'Liste des commandes'}
+      },
+      {
+        path: 'association-de-lyon',
+        loadComponent: () => import('./pages/lyon-association/lyon-association.component').then(m => m.LyonAssociationComponent),
+        data: { bannerTitle: 'Association de Lyon'}
+      },
+      
+      {
+        path: 'association-de-lyon2',
+        loadComponent: () => import('./pages/lyon-association2/lyon-association2.component').then(m => m.LyonAssociation2Component),
+        data: { bannerTitle: 'Association de Lyon'}
+      },
+      {
+        path: 'association-de-lyon3',
+        loadComponent: () => import('./pages/lyon-association3/lyon-association3.component').then(m => m.LyonAssociation3Component),
+        data: { bannerTitle: 'Association de Lyon'}
+      },
+      {
+        path: 'post-actualite',
+        loadComponent: () => import('./pages/post-actualite/post-actualite.component').then(m => m.PostActualiteComponent),
+        data: { bannerTitle: 'Posts actualités'}
+      },
+      {
         path: 'messages',
         loadComponent: () => import('./pages/messages/messages.component').then(m => m.MessagesComponent),
         data: { bannerTitle: 'Messages' }
@@ -70,7 +126,8 @@ export const routes: Routes = [
           {
             path: 'cagnottes',
             loadComponent: () => import('./pages/banking-transaction/sub-pages/banking-cagnotes/banking-cagnotes.component').then(m => m.BankingCagnotesComponent)
-          }
+          },
+          
         ]
       },
       {
